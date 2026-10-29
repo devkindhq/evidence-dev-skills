@@ -1,0 +1,20 @@
+{
+  "name": "evidence-dev-skills",
+  "owner": {
+    "name": "Devkind",
+    "url": "https://devkind.com.au"
+  },
+  "metadata": {
+    "description": "Agent Skills for Evidence.dev — charts, inputs, maps, data sources, CLI and custom components for AI coding agents.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "evidence-dev-skills",
+      "source": ".",
+      "description": "Agent Skills for Evidence.dev — charts, inputs, maps, data sources, CLI and custom components for AI coding agents.",
+      "category": "analytics",
+      "keywords": ["evidence", "evidence-dev", "agent-skills", "claude-skills", "claude-code", "sql", "data-visualization"]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+      - name: Lint SKILL.md frontmatter (name + description limits)
+        run: python3 scripts/validate_skills.py
+      - name: JSON manifests parse
+        run: |
+          python3 -c "import json;json.load(open('.claude-plugin/plugin.json'));json.load(open('.claude-plugin/marketplace.json'))"
+
+  skills-sh:
+    runs-on: ubuntu-latest
+    env:
+      DISABLE_TELEMETRY: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Verify skills are discoverable and installable
+        run: |
+          npx -y skills@1.7.4 add . --list | tee /tmp/skills-list.txt
+          test "$(grep -c '^evidence-' /tmp/skills-list.txt)" -eq 9

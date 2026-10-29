@@ -1,0 +1,13 @@
+{
+  "name": "evidence-dev-skills",
+  "description": "Agent Skills for Evidence.dev — charts, inputs, maps, data sources, CLI and custom components for AI coding agents.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Devkind",
+    "url": "https://devkind.com.au"
+  },
+  "homepage": "https://github.com/devkindhq/evidence-dev-skills",
+  "repository": "https://github.com/devkindhq/evidence-dev-skills",
+  "license": "MIT",
+  "keywords": ["evidence", "evidence-dev", "agent-skills", "claude-skills", "claude-code", "sql", "data-visualization", "analytics", "charts", "reporting", "bi", "duckdb", "svelte"]
+}
