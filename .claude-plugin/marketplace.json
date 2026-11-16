@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Agent Skills for Evidence.dev: charts, inputs, maps, data sources, CLI and custom components for AI coding agents.",
-    "version": "1.0.0"
+    "version": "1.0.1"
   },
   "plugins": [
     {
